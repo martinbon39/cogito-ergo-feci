@@ -8,7 +8,8 @@
 [![license](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 
 **Paper:** [PDF (arXiv version)](paper/main.pdf) · [PDF (NeurIPS 2026 format, anonymous, with checklist)](paper/neurips.pdf) ·
-arXiv: forthcoming · [Citation](#citation)
+DOI: [10.5281/zenodo.24061167](https://doi.org/10.5281/zenodo.24061167) (Zenodo, v1, 2026-11-08) · arXiv: forthcoming ·
+[Citation](#citation)
 
 This is the companion repository of the paper. It holds the paper sources, the data every number in the paper is
 generated from, the code that produced the data, one folder per study (negative results included), and CPU scripts
@@ -172,8 +173,11 @@ to the development repository; reports and scripts differ in paths, links and sc
   title  = {Cogito, Ergo Feci: False Success, the Limits of Weight Surgery, and What an External Verifier Catches in a Computer-Use Agent},
   author = {Jouannet, {\'E}mile and Boukhedenna, Souad and Bonan, Martin},
   year   = {2026},
-  note   = {arXiv preprint, forthcoming},
-  url    = {https://github.com/martinbon39/cogito-ergo-feci}
+  publisher = {Zenodo},
+  version = {v1},
+  doi    = {10.5281/zenodo.24061167},
+  url    = {https://doi.org/10.5281/zenodo.24061167},
+  note   = {Code and data: https://github.com/martinbon39/cogito-ergo-feci. arXiv preprint forthcoming}
 }
 ```
 Machine-readable: [`CITATION.cff`](CITATION.cff).

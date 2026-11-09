@@ -4,6 +4,10 @@ title: "Cogito, Ergo Feci: companion repository"
 type: software
 license: Apache-2.0
 repository-code: "https://github.com/martinbon39/cogito-ergo-feci"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.24061167"
+    description: "Zenodo record of the paper, v1 (2026-11-08)"
 authors:
   - family-names: Jouannet
     given-names: Émile
@@ -22,4 +26,10 @@ preferred-citation:
     - family-names: Bonan
       given-names: Martin
   year: 2026
-  notes: "arXiv preprint, forthcoming"
+  date-released: "2026-11-08"
+  doi: "10.5281/zenodo.24061167"
+  publisher:
+    name: Zenodo
+  version: "v1"
+  url: "https://doi.org/10.5281/zenodo.24061167"
+  notes: "arXiv preprint forthcoming"

@@ -38,6 +38,14 @@ for c, t in [("escalation_prim", "RbPrim"), ("escalation_strict", "RbStrict"), (
         m.add(f"ex{t}Worse", r["worse"], SRC + f" {c} units worse with the first arm")
     if "newcombe" in r:
         m.add(f"ex{t}Newcombe", " to ".join(f"{x:+.1f}".replace("-", "$-$") for x in r["newcombe"]), SRC + f" {c} Newcombe 95% interval (points)")
+# Qualitative statements of app_exact.tex, limits.tex and body.tex: the build fails if the data stop supporting them.
+assert not [r for r in rows if not r["boot_sig"] and r["verdict"] != "agrees"], "a comparison goes the other way"
+assert {r["claim"] for r in rows if r["verdict"] != "agrees"} == {"escalation_prim", "escalation_strict", "escalation_all", "guard_v2_det", "cohort_B-A_fs-"}
+assert all(r["p_flip"] >= 0.05 and r["holm"]["A_online_arms"] >= 0.05 for r in fam["A_online_arms"]), "an online arm reaches p < 0.05"
+assert [r["claim"] for r in fam["C_cohort_selectivity"] if r["holm"]["C_cohort_selectivity"] < 0.05] == ["cohort_D-A_selectivity"]
+assert by["cohort_D-A_selectivity"]["estimate"] > 0, "random control's selectivity no longer in the wrong direction"
+assert len(fam["B_cohort_false_completions"]) == 4 and len(fam["C_cohort_selectivity"]) == 3
+m.add("exRbPrimMid", p3(by["escalation_prim"]["p_mid"]), SRC + " escalation_prim mid-p of the exact sign test")
 small = [r for r in rows if r["small"]]
 m.add("exNSmall", len(small), SRC + " claims with fewer than 10 clusters or 10 discordant units")
 m.add("exNRows", len(rows), SRC + " paired claims re-analysed")

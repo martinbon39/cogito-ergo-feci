@@ -185,7 +185,7 @@ FRESH-115: 115 tasks, sha256 0e76f29147e6c1d45983a8b4d01e728c81047cf3f107a44ab06
 
 ## `python3 reproduce/check_links.py`, exit 0
 ```
-231 relative links checked in 161 documents, 0 broken
+248 relative links checked in 163 documents, 0 broken
 ```
 
 ## `bash reproduce/run_all.sh`, exit 0

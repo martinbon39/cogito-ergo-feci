@@ -9,7 +9,7 @@ Raw output: `ONLINE_GUARD_RESULT.json`.
 - **Runs.** 42468308809, 42468884640 and 42472655505. The last two rerun tasks lost to infrastructure: a GitHub 504 at setup, and a runner that lost contact with GitHub.
 - **Primary comparator.** The original agent, same Modal deployment, same runners and harness (`results_test_gh_orig_modal_test`).
 - **Secondary comparator.** The original agent served by the pod (`results_test_gh_orig`).
-- **Coverage.** 120/120 tasks, 0 excluded. The judge returned 104 verdicts with 0 errors: 22 refusals, 74 accepted complete, 2 passed at the refusal cap, 6 infeasible answers not checked.
+- **Coverage.** 120/120 tasks, 0 excluded. The agent called `answer` 104 times; 96 calls reached the judge, which returned 96 verdicts with 0 errors (22 refusals, 74 accepted complete); the other 8 answers were passed without a judge call: 2 at the refusal cap, 6 infeasible answers not checked. (Corrected 2026-11-09, see the end of this file.)
 
 ## Results (paired by task, bootstrap 10,000, seed 0)
 | | Original (Modal) | + Feci Guard | Difference [95% CI] |
@@ -67,3 +67,13 @@ The registered criterion compares the two arms; it does not say what caused the 
    - Final coverage is 120/120 tasks.
 3. **Arms not run.** The reserve-split replication (45 tasks) and the online Holo4 escalation arm were planned but not run: the pod was lost, and the Modal budget had to stay within its cap. The escalation is measured only on replays (`rescue_bench/`).
 4. **Judge route.** The judge was reached through the relay `feci_guard/guard_server.py` on our server, through an SSH tunnel limited to the relay port. It was not the Anthropic API. The verifier code is unchanged (`0af76fdb`). The Claude model is the CLI alias `sonnet`, and its version is not pinned.
+
+## Correction (2026-11-09)
+The coverage line first read "The judge returned 104 verdicts". 104 is the number of `answer` calls; only 96 reached the
+judge. Recount from the 120 `meta.json` files of the guarded run (`feci_guard` block, results directory
+`results_test_gh_orig_guard_claude` on the server that ran the analysis): `answers` sums to 104, `verifier_latency_s`
+holds 96 values (one per judge call), `decisions` count passed_complete 74, refused 22, passed_infeasible 6,
+passed_cap 2, and `verifier_errors` is empty. No other number in this file or in the paper changes: refusals (22) and
+the comparisons above did not use the 104. The copy in `paper/data/local/online/` is a frozen provenance snapshot and
+keeps the original wording (AGENTS.md: nothing under `paper/data/` is edited). Found by the h100prep review.
+

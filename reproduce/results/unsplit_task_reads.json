@@ -1,0 +1,965 @@
+{
+ "scanned_utc": "2026-11-09T11:21Z",
+ "roots": [
+  "/home/orbit/osw",
+  "/home/orbit/projects/ComputerUseHackaton",
+  "/home/orbit/projects/cefl-z1",
+  "/home/orbit/projects/lab"
+ ],
+ "skipped_dirs": [
+  ".git",
+  ".venv",
+  "__pycache__",
+  "evaluation_examples",
+  "evaluation_examples_windows",
+  "node_modules"
+ ],
+ "skipped_files": [
+  "docs/FRESH_TASKS.json",
+  "reproduce/results/unsplit_task_reads.json",
+  "src/osworld/test_nogdrive.json"
+ ],
+ "text_suffixes": [
+  ".csv",
+  ".json",
+  ".jsonl",
+  ".log",
+  ".md",
+  ".py",
+  ".sh",
+  ".tex",
+  ".txt"
+ ],
+ "harness_checkout": "/home/orbit/osw/rtg",
+ "harness_commit": "a763361f9fffad5fcbbdb16bdb51ea3ff667c183 2026-06-29T21:01:05+08:00",
+ "n_unsplit": 121,
+ "tasks": {
+  "chrome/030eeff7-b492-4218-b312-701ec99ee0cc": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "chrome/06fe7178-4491-4589-810f-2e2bc9502122": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/Env/OSWorld/scripts/bash/run_manual_examine.sh",
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "chrome/121ba48f-9e17-48ce-9bc6-a4fb17a7ebba": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/Env/OSWorld/mm_agents/maestro/maestro/debug_system/test_html_parsing.py",
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "chrome/1704f00f-79e6-43a7-961b-cedd3724d5fd": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "chrome/2888b4e6-5b47-4b57-8bf5-c73827890774": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "chrome/2ae9ba84-3a0d-4d4c-8338-3a1478dc5fe3": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/Env/OSWorld/scripts/bash/run_manual_examine.sh",
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "chrome/6766f2b8-8a72-417f-a9e5-56fcaa735837": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "chrome/7f52cab9-535c-4835-ac8c-391ee64dc930": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "chrome/82279c77-8fc6-46f6-9622-3ba96f61b477": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "chrome/82bc8d6a-36eb-4d2d-8801-ef714fb1e55a": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/Env/OSWorld/mm_agents/maestro/maestro/debug_system/test_url.py",
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "chrome/af630914-714e-4a24-a7bb-f9af687d3b91": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "chrome/b4f95342-463e-4179-8c3f-193cd7241fb2": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/Env/OSWorld/scripts/bash/run_manual_examine.sh",
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "chrome/b7895e80-f4d1-4648-bee0-4eb45a6f1fa8": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/Env/OSWorld/scripts/bash/run_manual_examine.sh",
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "chrome/bb5e4c0d-f964-439c-97b6-bdb9747de3f4": {
+   "result_dirs": [
+    "/home/orbit/osw/results_pilot1/pyautogui/screenshot/Holo-3.1-4B/chrome/bb5e4c0d-f964-439c-97b6-bdb9747de3f4",
+    "/home/orbit/osw/rtg/Env/OSWorld/cache/bb5e4c0d-f964-439c-97b6-bdb9747de3f4"
+   ],
+   "files": [
+    "/home/orbit/osw/pilot.json",
+    "/home/orbit/osw/results_pilot1.log",
+    "/home/orbit/osw/results_pilot1/pyautogui/screenshot/Holo-3.1-4B/chrome/bb5e4c0d-f964-439c-97b6-bdb9747de3f4/meta.json"
+   ],
+   "harness_files": [
+    "/home/orbit/osw/rtg/Env/OSWorld/scripts/bash/run_manual_examine.sh",
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "chrome/f5d96daf-83a8-4c86-9686-bada31fc66ab": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "chrome/f79439ad-3ee8-4f99-a518-0eb60e5652b0": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/Env/OSWorld/holo_repro/debug_one.py",
+    "/home/orbit/osw/rtg/osworld_results.csv",
+    "/home/orbit/osw/rtg/\u590d\u73b0_debug_\u4e32\u884c.md",
+    "/home/orbit/osw/rtg/\u590d\u73b0_debug_\u5355\u4efb\u52a1.md"
+   ]
+  },
+  "gimp/58d3eeeb-e9d0-499f-962e-fd0db2a744d8": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "gimp/5ca86c6f-f317-49d8-b6a7-b527541caae8": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/Env/OSWorld/holo_repro/ab_baseline.json",
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "gimp/7767eef2-56a3-4cea-8c9f-48c070c7d65b": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "gimp/a746add2-cab0-4740-ac36-c3769d9bfb46": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "gimp/b148e375-fe0b-4bec-90e7-38632b0d73c2": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "gimp/d52d6308-ec58-42b7-a2c9-de80e4837b2b": {
+   "result_dirs": [
+    "/home/orbit/osw/results_pilot3/pyautogui/screenshot/Holo-3.1-4B/gimp/d52d6308-ec58-42b7-a2c9-de80e4837b2b",
+    "/home/orbit/osw/rtg/Env/OSWorld/cache/d52d6308-ec58-42b7-a2c9-de80e4837b2b"
+   ],
+   "files": [
+    "/home/orbit/osw/pilot3.json",
+    "/home/orbit/osw/results_pilot3.log",
+    "/home/orbit/osw/results_pilot3/pyautogui/screenshot/Holo-3.1-4B/gimp/d52d6308-ec58-42b7-a2c9-de80e4837b2b/meta.json"
+   ],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "gimp/e2dd0213-26db-4349-abe5-d5667bfd725c": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/Env/OSWorld/desktop_env/evaluators/metrics/gimp.py",
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "gimp/f723c744-e62c-4ae6-98d1-750d3cd7d79d": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/Env/OSWorld/desktop_env/evaluators/metrics/gimp.py",
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "libreoffice_calc/01b269ae-2111-4a07-81fd-3fcd711993b0": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "libreoffice_calc/035f41ba-6653-43ab-aa63-c86d449d62e5": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "libreoffice_calc/0a2e43bf-b26c-4631-a966-af9dfa12c9e5": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "libreoffice_calc/12382c62-0cd1-4bf2-bdc8-1d20bf9b2371": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "libreoffice_calc/1954cced-e748-45c4-9c26-9855b97fbc5e": {
+   "result_dirs": [
+    "/home/orbit/osw/results_pilot1/pyautogui/screenshot/Holo-3.1-4B/libreoffice_calc/1954cced-e748-45c4-9c26-9855b97fbc5e",
+    "/home/orbit/osw/rtg/Env/OSWorld/cache/1954cced-e748-45c4-9c26-9855b97fbc5e"
+   ],
+   "files": [
+    "/home/orbit/osw/pilot.json",
+    "/home/orbit/osw/results_pilot1.log",
+    "/home/orbit/osw/results_pilot1/pyautogui/screenshot/Holo-3.1-4B/libreoffice_calc/1954cced-e748-45c4-9c26-9855b97fbc5e/meta.json"
+   ],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "libreoffice_calc/30e3e107-1cfb-46ee-a755-2cd080d7ba6a": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "libreoffice_calc/4172ea6e-6b77-4edb-a9cc-c0014bd1603b": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "libreoffice_calc/4188d3a4-077d-46b7-9c86-23e1a036f6c1": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "libreoffice_calc/4de54231-e4b5-49e3-b2ba-61a0bec721c0": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/Env/OSWorld/holo_repro/ab_baseline.json",
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "libreoffice_calc/4e6fcf72-daf3-439f-a232-c434ce416af6": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/Env/OSWorld/scripts/bash/run_manual_examine.sh",
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "libreoffice_calc/6054afcb-5bab-4702-90a0-b259b5d3217c": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/Env/OSWorld/holo_repro/ab_baseline.json",
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "libreoffice_calc/6e99a1ad-07d2-4b66-a1ce-ece6d99c20a5": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "libreoffice_calc/7e429b8d-a3f0-4ed0-9b58-08957d00b127": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "libreoffice_calc/7efeb4b1-3d19-4762-b163-63328d66303b": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "libreoffice_calc/8b1ce5f2-59d2-4dcc-b0b0-666a714b9a14": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/Env/OSWorld/scripts/bash/run_manual_examine.sh",
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "libreoffice_calc/a01fbce3-2793-461f-ab86-43680ccbae25": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/Env/OSWorld/holo_repro/ab_baseline.json",
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "libreoffice_calc/eb03d19a-b88d-4de4-8a64-ca0ac66f426b": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "libreoffice_impress/05dd4c1d-c489-4c85-8389-a7836c4f0567": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/Env/OSWorld/holo_repro/ab_baseline.json",
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "libreoffice_impress/15aece23-a215-4579-91b4-69eec72e18da": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "libreoffice_impress/21760ecb-8f62-40d2-8d85-0cee5725cb72": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "libreoffice_impress/39be0d19-634d-4475-8768-09c130f5425d": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "libreoffice_impress/4ed5abd0-8b5d-47bd-839f-cacfa15ca37a": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "libreoffice_impress/5cfb9197-e72b-454b-900e-c06b0c802b40": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "libreoffice_impress/986fc832-6af2-417c-8845-9272b3a1528b": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "libreoffice_impress/9cf05d24-6bd9-4dae-8967-f67d88f5d38a": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "libreoffice_impress/a097acff-6266-4291-9fbd-137af7ecd439": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "libreoffice_impress/a53f80cd-4a90-4490-8310-097b011433f6": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "libreoffice_impress/a669ef01-ded5-4099-9ea9-25e99b569840": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/Env/OSWorld/README.md",
+    "/home/orbit/osw/rtg/Env/OSWorld/scripts/README.md",
+    "/home/orbit/osw/rtg/Env/OSWorld/scripts/bash/run_manual_examine.sh",
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "libreoffice_impress/ac1b39ff-ee4d-4483-abce-c117e98942f0": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "libreoffice_impress/ac9bb6cb-1888-43ab-81e4-a98a547918cd": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "libreoffice_impress/af23762e-2bfd-4a1d-aada-20fa8de9ce07": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "libreoffice_impress/c82632a4-56b6-4db4-9dd1-3820ee3388e4": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "libreoffice_impress/ce88f674-ab7a-43da-9201-468d38539e4a": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "libreoffice_impress/f23acfd2-c485-4b7c-a1e7-d4303ddfe864": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "libreoffice_writer/0a0faba3-5580-44df-965d-f562a99b291c": {
+   "result_dirs": [
+    "/home/orbit/osw/results_pilot3/pyautogui/screenshot/Holo-3.1-4B/libreoffice_writer/0a0faba3-5580-44df-965d-f562a99b291c",
+    "/home/orbit/osw/rtg/Env/OSWorld/cache/0a0faba3-5580-44df-965d-f562a99b291c"
+   ],
+   "files": [
+    "/home/orbit/osw/pilot3.json",
+    "/home/orbit/osw/results_pilot3.log",
+    "/home/orbit/osw/results_pilot3/pyautogui/screenshot/Holo-3.1-4B/libreoffice_writer/0a0faba3-5580-44df-965d-f562a99b291c/meta.json"
+   ],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "libreoffice_writer/4bcb1253-a636-4df4-8cb0-a35c04dfef31": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "libreoffice_writer/72b810ef-4156-4d09-8f08-a0cf57e7cefe": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "libreoffice_writer/8472fece-c7dd-4241-8d65-9b3cd1a0b568": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "libreoffice_writer/adf5e2c3-64c7-4644-b7b6-d2f0167927e7": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "libreoffice_writer/e528b65e-1107-4b8c-8988-490e4fece599": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "libreoffice_writer/f178a4a9-d090-4b56-bc4c-4b72a61a035d": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "multi_apps/00fa164e-2612-4439-992e-157d019a8436": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "multi_apps/26150609-0da3-4a7d-8868-0faf9c5f01bb": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "multi_apps/2b9493d7-49b8-493a-a71b-56cd1f4d6908": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "multi_apps/337d318b-aa07-4f4f-b763-89d9a2dd013f": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "multi_apps/3680a5ee-6870-426a-a997-eba929a0d25c": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "multi_apps/3a93cae4-ad3e-403e-8c12-65303b271818": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "multi_apps/3c8f201a-009d-4bbe-8b65-a6f8b35bb57f": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/Env/OSWorld/mm_agents/mobileagent_v3/Perplexica_rag_knowledge_verified.json",
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "multi_apps/3e3fc409-bff3-4905-bf16-c968eee3f807": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "multi_apps/3f05f3b9-29ba-4b6b-95aa-2204697ffc06": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "multi_apps/415ef462-bed3-493a-ac36-ca8c6d23bf1b": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "multi_apps/51f5801c-18b3-4f25-b0c3-02f85507a078": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "multi_apps/68a25bd4-59c7-4f4d-975e-da0c8509c848": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "multi_apps/6d72aad6-187a-4392-a4c4-ed87269c51cf": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "multi_apps/778efd0a-153f-4842-9214-f05fc176b877": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "multi_apps/7f35355e-02a6-45b5-b140-f0be698bcf85": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/Env/OSWorld/desktop_env/evaluators/metrics/vscode.py",
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "multi_apps/7ff48d5b-2df2-49da-b500-a5150ffc7f18": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "multi_apps/82e3c869-49f6-4305-a7ce-f3e64a0618e7": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "multi_apps/869de13e-bef9-4b91-ba51-f6708c40b096": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "multi_apps/873cafdd-a581-47f6-8b33-b9696ddb7b05": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "multi_apps/91190194-f406-4cd6-b3f9-c43fac942b22": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "multi_apps/98e8e339-5f91-4ed2-b2b2-12647cb134f4": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "multi_apps/9f3bb592-209d-43bc-bb47-d77d9df56504": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "multi_apps/a503b07f-9119-456b-b75d-f5146737d24f": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "multi_apps/acb0f96b-e27c-44d8-b55f-7cb76609dfcd": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "multi_apps/aceb0368-56b8-4073-b70e-3dc9aee184e0": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/Env/OSWorld/holo_repro/ab_baseline.json",
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "multi_apps/df67aebb-fb3a-44fd-b75b-51b6012df509": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/Env/OSWorld/holo_repro/ab_baseline.json",
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "multi_apps/eb303e01-261e-4972-8c07-c9b4e7a4922a": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "multi_apps/ee9a3c83-f437-4879-8918-be5efbb9fac7": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "multi_apps/f8369178-fafe-40c2-adc4-b9b08a125456": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "multi_apps/f8cfa149-d1c1-4215-8dac-4a0932bad3c2": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "multi_apps/f918266a-b3e0-4914-865d-4faa564f1aef": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "os/3ce045a0-877b-42aa-8d2c-b4a863336ab8": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "os/4127319a-8b79-4410-b58a-7a151e15f3d7": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "os/4783cc41-c03c-4e1b-89b4-50658f642bd5": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "os/4d117223-a354-47fb-8b45-62ab1390a95f": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "os/94d95f96-9699-4208-98ba-3c3119edf9c2": {
+   "result_dirs": [
+    "/home/orbit/osw/results_pilot1/pyautogui/screenshot/Holo-3.1-4B/os/94d95f96-9699-4208-98ba-3c3119edf9c2",
+    "/home/orbit/osw/rtg/Env/OSWorld/cache/94d95f96-9699-4208-98ba-3c3119edf9c2",
+    "/home/orbit/projects/ComputerUseHackaton/holo-neurochir/runs/osw_demo_acts/os/94d95f96-9699-4208-98ba-3c3119edf9c2"
+   ],
+   "files": [
+    "/home/orbit/osw/pilot.json",
+    "/home/orbit/osw/results_pilot1.log",
+    "/home/orbit/osw/results_pilot1/pyautogui/screenshot/Holo-3.1-4B/os/94d95f96-9699-4208-98ba-3c3119edf9c2/meta.json",
+    "/home/orbit/projects/ComputerUseHackaton/holo-neurochir/dashboard/demo/osw_fs1_spotify.json",
+    "/home/orbit/projects/ComputerUseHackaton/holo-neurochir/osworld/demo_episodes.json",
+    "/home/orbit/projects/ComputerUseHackaton/holo-neurochir/paper/data/local/demo/osw_fs1_spotify.json",
+    "/home/orbit/projects/ComputerUseHackaton/holo-neurochir/paper/data/local/spotify/meta.json",
+    "/home/orbit/projects/ComputerUseHackaton/holo-neurochir/paper/data/local/spotify/task.json",
+    "/home/orbit/projects/ComputerUseHackaton/holo-neurochir/runs/osw_demo_acts/os/94d95f96-9699-4208-98ba-3c3119edf9c2/replay.json",
+    "/home/orbit/projects/cefl-z1/paper/data/local/demo/osw_fs1_spotify.json",
+    "/home/orbit/projects/cefl-z1/paper/data/local/spotify/meta.json",
+    "/home/orbit/projects/cefl-z1/paper/data/local/spotify/task.json"
+   ],
+   "harness_files": [
+    "/home/orbit/osw/rtg/Env/OSWorld/quickstart.py",
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "os/a462a795-fdc7-4b23-b689-e8b6df786b78": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "os/e0df059f-28a6-4169-924f-b9623e7184cc": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "os/f9be0997-4b7c-45c5-b05c-4612b44a6118": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "thunderbird/15c3b339-88f7-4a86-ab16-e71c58dcb01e": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/Env/OSWorld/holo_repro/ab_baseline.json",
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "thunderbird/3f49d2cc-f400-4e7d-90cc-9b18e401cc31": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "thunderbird/7b1e1ff9-bb85-49be-b01d-d6424be18cd0": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "thunderbird/a1af9f1c-50d5-4bc3-a51e-4d9b425ff638": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "thunderbird/d38192b0-17dc-4e1d-99c3-786d0117de77": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "vlc/215dfd39-f493-4bc3-a027-8a97d72c61bf": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "vlc/59f21cfb-0120-4326-b255-a5b827b38967": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "vlc/8ba5ae7a-5ae5-4eab-9fcc-5dd4fe3abf89": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "vlc/a5bbbcd5-b398-4c91-83d4-55e1e31bbb81": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "vlc/fba2c100-79e8-42df-ae74-b592418d54f4": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "vs_code/0ed39f63-6049-43d4-ba4d-5fa2fe04a951": {
+   "result_dirs": [
+    "/home/orbit/osw/results_pilot3/pyautogui/screenshot/Holo-3.1-4B/vs_code/0ed39f63-6049-43d4-ba4d-5fa2fe04a951",
+    "/home/orbit/osw/rtg/Env/OSWorld/cache/0ed39f63-6049-43d4-ba4d-5fa2fe04a951"
+   ],
+   "files": [
+    "/home/orbit/osw/pilot3.json",
+    "/home/orbit/osw/results_pilot3.log",
+    "/home/orbit/osw/results_pilot3/pyautogui/screenshot/Holo-3.1-4B/vs_code/0ed39f63-6049-43d4-ba4d-5fa2fe04a951/meta.json"
+   ],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "vs_code/276cc624-87ea-4f08-ab93-f770e3790175": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "vs_code/7aeae0e2-70ee-4705-821d-1bba5d5b2ddd": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "vs_code/847a96b6-df94-4927-97e6-8cc9ea66ced7": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "vs_code/930fdb3b-11a8-46fe-9bac-577332e2640e": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "vs_code/c6bf789c-ba3a-4209-971d-b63abf0ab733": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  },
+  "vs_code/e2b5e914-ffe1-44d2-8e92-58f8c5d92bb2": {
+   "result_dirs": [],
+   "files": [],
+   "harness_files": [
+    "/home/orbit/osw/rtg/osworld_results.csv"
+   ]
+  }
+ }
+}

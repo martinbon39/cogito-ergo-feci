@@ -47,4 +47,9 @@ bash paper/build.sh                 # rebuilds every number, table, figure and b
   `experiments/weight_edits/task_vector_merge`, and so on; the table is in
   [experiments/weight_edits/README.md](experiments/weight_edits/README.md)). Reports inside them may still use the
   old names.
-- Claims follow one rule: a gain is claimed only if the lower bound of the paired 95 % CI is above zero.
+- Claims follow one rule: a gain is claimed only if the lower bound of the paired 95 % CI is above zero. With fewer than
+  10 clusters or 10 discordant units the bootstrap interval is too narrow: `reproduce/exact_reanalysis.py` must then
+  give exact p < 0.05 too, or the text says "not significant by an exact test" (its table lists every such claim).
+- Splits: every read of DIAG, the reserve and TEST is in [docs/SPLIT_LEDGER.md](docs/SPLIT_LEDGER.md). The 115 tasks of
+  [docs/FRESH_TASKS.json](docs/FRESH_TASKS.json) have been read by no run and are reserved for one confirmatory run
+  ([docs/FRESH_REGISTRATION.md](docs/FRESH_REGISTRATION.md)); do not run, open or sample them for anything else.

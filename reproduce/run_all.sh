@@ -18,4 +18,10 @@ echo; echo "== (3) the three judges recounted from their raw responses =="
 echo; echo "== (4) online Feci Guard test, 120 OSWorld tasks =="
 "$PY" reproduce/verify_online_guard.py
 
-echo; echo "ALL CHECKS OK: (1)-(4) match the numbers reported in the paper."
+echo; echo "== (5) exact small-sample tests and Holm-adjusted p-values next to the paper's bootstrap intervals =="
+"$PY" reproduce/exact_reanalysis.py
+
+echo; echo "== (6) FRESH-115: the never-read OSWorld tasks kept for one confirmatory run =="
+"$PY" reproduce/fresh_tasks.py
+
+echo; echo "ALL CHECKS OK: (1)-(6) match the numbers reported in the paper."

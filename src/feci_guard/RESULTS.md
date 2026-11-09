@@ -102,3 +102,10 @@ On vlc/386dbd0e (false success, a global hotkey setting), the passive mode answe
 visible (cannot_tell). The active mode answers NEED_CHECK and asks to open Tools > Preferences > Hotkeys. Latency is
 6.5–10.6 s. Cost: $7.60 for the 268 judge_bench calls, about **$0.028 per check**
 (the ~$0.04 seen in the hand tests is not representative).
+
+## Correction appended 2026-11-09 (exact re-analysis; the text above is kept as written)
+Point 2 above says v2 "detects significantly more than v1". The paired bootstrap interval excludes 0, but the gain rests
+on 4 discordant episodes against 0: an exact McNemar test gives p = 0.125 (exact sign-flip over task clusters: same),
+so the gain is not significant by an exact test. The false-rejection change is 10 against 5 discordant, exact p = 0.30.
+Source: `python3 reproduce/exact_reanalysis.py` (rows guard_v2_det and guard_v2_rej); paper Appendix "Exact
+small-sample tests".

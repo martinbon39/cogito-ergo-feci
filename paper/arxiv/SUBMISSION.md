@@ -1,7 +1,8 @@
 # arXiv submission: Cogito, Ergo Feci
 
 Everything to paste into the arXiv submission form, and the steps for the submitter.
-Build the package first: see "Build" below. Values marked TO APPROVE need Martin's decision.
+Build the package first: see "Build" below. Martin approved the abstract, the AI-use sentence, the affiliations and
+the title-page date on 2026-11-09.
 
 ## Build
 
@@ -41,10 +42,9 @@ Cogito, Ergo Feci: False Success, the Limits of Weight Surgery, and What an Exte
 Émile Jouannet, Souad Boukhedenna, Martin Bonan
 ```
 If the form rejects the accent, use `\'Emile Jouannet`. Affiliations go in the PDF only (EPITA; SKEMA Business
-School; Independent), not in this field. TO APPROVE: the source comments say these affiliations were inferred
-from e-mail domains and must be confirmed by Martin.
+School; Independent), not in this field. Affiliations confirmed by Martin (2026-11-09).
 
-**Abstract** (TO APPROVE). The paper's abstract is 2134 characters as plain text; arXiv's limit is 1920. This
+**Abstract** (approved by Martin, 2026-11-09; the PDF keeps its full abstract). The paper's abstract is 2134 characters as plain text; arXiv's limit is 1920. This
 shortened version keeps every number and the attribution caveat; it drops the pilot screens' exact power
 (8/8 to 4/8), the closed-form edit clause, "perhaps carried by the success claim in the retained reasoning", the
 CLI-alias note and "formally meeting the registered criterion". 1764 characters, ASCII only:
@@ -89,15 +89,15 @@ pages because floats land differently). Recount after a rebuild.
 
 - **Date on the title page.** `main.tex` prints `Preprint · \today`. On arXiv that is the date AutoTeX compiles the
   source, so it shows the submission date and changes if arXiv regenerates the PDF. The paper shows no fixed date
-  elsewhere (the Zenodo record is dated 2026-11-08), so it is left as is. To freeze it, replace `\today` with a date.
-- **AI use (TO APPROVE).** arXiv asks that significant use of generative AI tools be reported in the paper and does
+  elsewhere (the Zenodo record is dated 2026-11-08), so it is left as is (Martin's decision, 2026-11-09).
+- **AI use.** arXiv asks that significant use of generative AI tools be reported in the paper and does
   not accept AI tools as authors. The paper already says, in `sec/repro.tex` line 7:
   "The experiments were planned, run and reviewed by AI agents (Claude Code sessions, and GPT-6 Astra through the
   Codex CLI) under human supervision; Appendix~\ref{sec:method} describes the organisation, the safeguards and the
   rules that were not respected." Appendix `sec/app_method.tex` ("Organisation", "Human team") gives the details.
   This discloses AI use for the research clearly. It does not say who wrote the paper text: in the development
   repository, all 28 commits that touch `holo-neurochir/paper/sec` or `main.tex` carry a
-  "Co-Authored-By: Claude" trailer. Proposed addition, at the end of that paragraph in `sec/repro.tex`:
+  "Co-Authored-By: Claude" trailer. Martin approved this sentence, now right after line 7 of `sec/repro.tex`:
 
   > The text of this paper, its figures and the scripts that generate its numbers were also drafted by these agents
   > and revised by the authors, who checked the claims against the recorded data and take full responsibility for

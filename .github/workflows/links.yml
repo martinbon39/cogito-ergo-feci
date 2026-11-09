@@ -1,0 +1,26 @@
+name: links
+# Every relative link of the Markdown files and every cross-folder path of the scripts resolves.
+on:
+  push:
+    paths:
+      - "**.md"
+      - "llms.txt"
+      - "reproduce/check_links.py"
+      - "reproduce/check_paths.py"
+      - "**.py"
+      - ".github/workflows/links.yml"
+  pull_request:
+  workflow_dispatch:
+concurrency:
+  group: links-${{ github.ref }}
+  cancel-in-progress: true
+permissions:
+  contents: read
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 reproduce/check_links.py
+      - run: python3 reproduce/check_paths.py

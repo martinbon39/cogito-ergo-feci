@@ -1,0 +1,28 @@
+# Cogito, Ergo Feci
+
+> Companion repository of the paper "Cogito, Ergo Feci: False Success, the Limits of Weight Surgery, and What an External Verifier Catches in a Computer-Use Agent" (Jouannet, Boukhedenna, Bonan, 2026). The computer-use agent Holo-3.1-4B ends 29 of its 51 failed OSWorld tasks with a false "done". The agent does not detect it (self-judging at chance), about 15 activation and weight edits do not remove it, and an external verifier (Feci Guard, Claude Sonnet) separates false from true successes offline (45/66 detected, 21/202 false rejections). Online the guarded run's false "done" rate fell from 22.5 % to 10.8 %, but mostly in episodes where the guard never ran, so the drop is not attributed to the guard; no score gain is claimed.
+
+`bash reproduce/run_all.sh` recomputes the headline numbers with Python >= 3.9 standard library only (exit 0 = all equal to the paper). A gain is claimed only if the lower bound of the paired 95 % CI is above zero.
+
+## Start here
+- [README.md](README.md): abstract, claims → evidence → command table, reproduction levels, layout, citation
+- [AGENTS.md](AGENTS.md): rules for coding agents working in this repository
+- [paper/README.md](paper/README.md): how the paper is built from data (every macro, table and figure)
+- [docs/REPO_MAP.md](docs/REPO_MAP.md): every folder, its status and its source-of-truth file
+- [docs/RESEARCH_SYSTEM.md](docs/RESEARCH_SYSTEM.md): how the research was run (agents, compute, statistics)
+- [docs/PROVENANCE.md](docs/PROVENANCE.md): this repository is a one-commit snapshot; hashes of the project's history and pre-registration commit times live in the archived development repository martinbon39/ComputerUseHackaton
+
+## Verify
+- [reproduce/run_all.sh](reproduce/run_all.sh): all CPU checks
+- [reproduce/verify_results.py](reproduce/verify_results.py): online paired comparisons of the weight edits from per-task scores
+- [reproduce/recount_judges.py](reproduce/recount_judges.py): the three judges recounted from raw responses
+- [reproduce/replay_guard.py](reproduce/replay_guard.py): frozen guard decision replayed on 268 recorded episodes
+- [reproduce/verify_online_guard.py](reproduce/verify_online_guard.py): online guard test from 360 per-task outcomes
+- [reproduce/EXPECTED_OUTPUT.md](reproduce/EXPECTED_OUTPUT.md): expected outputs
+
+## Code and results
+- [src/feci_guard/README.md](src/feci_guard/README.md): the verifier, its backends and commands
+- [experiments/judge_bench/REPORT.md](experiments/judge_bench/REPORT.md): three judges on the same 268 screens
+- [experiments/online_guard/ONLINE_GUARD_RESULT.md](experiments/online_guard/ONLINE_GUARD_RESULT.md): online guard result and attribution
+- [experiments/rescue_bench/REPORT.md](experiments/rescue_bench/REPORT.md): escalation to Holo4-27B in replay
+- [experiments/weight_edits/README.md](experiments/weight_edits/README.md): the weight-edit families and their verdicts

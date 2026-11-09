@@ -49,6 +49,8 @@ gives each folder's status, headline and former name (`astra-*`, `moon-*`, `repo
 | Path | What | Former path |
 |---|---|---|
 | [`docs/RESEARCH_SYSTEM.md`](RESEARCH_SYSTEM.md) | How the research was run: agents, compute, VMs, statistics, incidents | same |
+| [`docs/SPLIT_LEDGER.md`](SPLIT_LEDGER.md) | Every read of DIAG, the reserve, TEST and the unsplit tasks, by run, date and decision fed | new (2026-11-09) |
+| [`docs/FRESH_REGISTRATION.md`](FRESH_REGISTRATION.md), [`docs/FRESH_TASKS.json`](FRESH_TASKS.json) | FRESH-115, the 115 never-read tasks, registered for one confirmatory run; checked by `reproduce/fresh_tasks.py` | new (2026-11-09) |
 | [`docs/PROVENANCE.md`](PROVENANCE.md) | First commit of every pre-registration; every cited commit, linked to the development repository | new |
 | [`docs/reviews/`](reviews/) | Adversarial reviews and fresh-eyes rounds of 8 November | `holo-neurochir/report/{REDTEAM_0305, REDTEAM2_0335, IDEATION_ROUNDS}.md` |
 | [`docs/lab_notebook/`](lab_notebook/) | Raw working logs (mostly French): orchestrator log, journal, original brief, handover notes | `LOG.md`, `holo-neurochir/{JOURNAL, BRIEF_neurochirurgie_holo_LOCAL, HANDOFF}.md` |

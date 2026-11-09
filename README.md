@@ -75,11 +75,14 @@ screens, not in an agent loop).
 | 6 | Noise floor: same model, two servers | +1.5 [−4.5, +7.6], n = 120 | reference | same |
 | 7 | Feci Guard on the same 268 final screens (90 tasks) | detects 45/66 (68 % [56, 78]), wrongly rejects 21/202 (10 % [7, 15]); gap +58 [+41, +74] | offline | `python3 reproduce/replay_guard.py` |
 | 8 | Guard repair by the same agent, replayed false successes | 5/18 vs 2/18 branches scored 1 (3 genuine repairs vs 0); +16.7 [0, +44] | replay: not distinguishable from 0 | [`src/feci_guard/RESULTS.md`](src/feci_guard/RESULTS.md) |
-| 9 | Guard refusal then escalation to Holo4-27B, vs Holo4-27B alone | 11/18 vs 2/18 branches scored 1; +50 [+22, +78], 9 episodes (all 12 episodes: +33 [+4, +63]) | replay, pre-registered | [`experiments/rescue_bench/REPORT.md`](experiments/rescue_bench/REPORT.md), [`PREREG.md`](experiments/rescue_bench/PREREG.md) |
+| 9 | Guard refusal then escalation to Holo4-27B, vs Holo4-27B alone | 11/18 vs 2/18 branches scored 1; +50 [+22, +78], 9 episodes, 5 better / 0 worse: exact p = 0.0625 (all 12 episodes: +33 [+4, +63], exact p = 0.094) | replay, pre-registered; **not significant by an exact test** | [`experiments/rescue_bench/REPORT.md`](experiments/rescue_bench/REPORT.md), [`PREREG.md`](experiments/rescue_bench/PREREG.md) |
 | 10 | Agent + guard online, 120-task test split, vs the same model on the same server | false "done" 22.5 % → 10.8 %: −11.7 [−19.2, −4.2]; score +1.6 [−4.4, +7.7]. In 28 episodes the agent never answered and the guard never ran; they carry 9 of the net drop of 14 | measured, pre-registered; **drop not attributed to the guard**, no score gain | `python3 reproduce/verify_online_guard.py`, [attribution](experiments/online_guard/ONLINE_GUARD_RESULT.md#attribution-added-after-the-result-2026-11-08-not-part-of-the-registered-analysis) |
-| 11 | Guard v2 (Opus, previous screens) vs v1, held-out half used once | detection 20/29 vs 16/29: +13.8 [+2.9, +30]; false rejection 15/116 vs 10/116: +4.3 [−5, +15] | offline; target not met | [`src/feci_guard/RESULTS.md`](src/feci_guard/RESULTS.md), [`v2/PROTOCOL.md`](src/feci_guard/v2/PROTOCOL.md) |
+| 11 | Guard v2 (Opus, previous screens) vs v1, held-out half used once | detection 20/29 vs 16/29: +13.8 [+2.9, +30], 4 vs 0 discordant, exact McNemar p = 0.125; false rejection 15/116 vs 10/116: +4.3 [−5, +15] | offline; target not met; detection gain **not significant by an exact test** | [`src/feci_guard/RESULTS.md`](src/feci_guard/RESULTS.md), [`v2/PROTOCOL.md`](src/feci_guard/v2/PROTOCOL.md) |
 
 Caveats that change how to read the table:
+- Rows 9 and 11 rest on few discordant units, where a bootstrap interval is too narrow. `python3
+  reproduce/exact_reanalysis.py` puts exact tests next to every such claim and Holm-adjusted p-values over the online
+  arms; it is the source of the exact p-values above (paper appendix "Exact small-sample tests").
 - Rows 2 and 7 use different prompts. Holo4-27B behind the same frozen guard prompt detects 31/66 and wrongly rejects
   49/202 (gap +23 [+5, +40]); Claude stays ahead at equal prompt, so the advantage is mostly the model
   ([`experiments/judge_bench/REPORT.md`](experiments/judge_bench/REPORT.md)). The verifier sees one screen and cannot

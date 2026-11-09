@@ -97,12 +97,99 @@ Online Feci Guard test, OSWorld test split, paired by task (bootstrap 10,000, se
 Matches ONLINE_GUARD_RESULT.json exactly.
 ```
 
+## `python3 reproduce/exact_reanalysis.py`, exit 0
+Added 2026-11-09 with the exact re-analysis (branch `lab/z1-exact-reanalysis`), same machine and Python. "disagrees"
+marks a claim whose bootstrap interval excludes 0 while both exact tests give p >= 0.05.
+```
+== Exact tests next to the paper's bootstrap intervals (points; p two-sided) ==
+small = fewer than 10 clusters or fewer than 10 discordant units. flip = exact sign-flip randomisation over clusters;
+sign = exact sign test on better/worse units (= exact McNemar when binary); Newcombe = paired score interval (binary only).
+
+-- small-n claims --
+claim                        location                      clu     b/w    est     bootstrap CI  p flip  p sign   mid-p         Newcombe  verdict
+escalation_prim              sec/guard.tex:27                9     5/0  +50.0   [+22.0, +78.0]  0.0625  0.0625  0.0312                -  disagrees
+escalation_strict            sec/guard.tex:27                8     4/0  +50.0   [+13.0, +88.0]  0.1250  0.1250  0.0625                -  disagrees
+escalation_all               sec/guard.tex:27               12     5/1  +33.3    [+4.0, +63.0]  0.0938  0.2188  0.1250                -  disagrees
+repair                       sec/guard.tex:25                9     2/0  +16.7    [+0.0, +44.0]  0.5000  0.5000  0.2500                -  agrees
+repair_all                   sec/guard.tex:25               12     2/0  +12.5    [+0.0, +33.0]  0.5000  0.5000  0.2500                -  agrees
+guard_v2_det                 sec/guard.tex:10               16     4/0  +13.8    [+3.0, +30.0]  0.1250  0.1250  0.0625    [+1.3, +25.6]  disagrees
+onReserveExpo                sec/interventions.tex:101      44     3/4   -2.3    [-13.6, +9.1]  1.0000  1.0000  0.7266                -  agrees
+onReserveLmrow               generated/tab_b4_heldout.tex   14     2/4  -14.3   [-50.0, +21.4]  0.6875  0.6875  0.4531                -  agrees
+onReservePrompt              generated/tab_b4_heldout.tex   20     1/2   -5.0   [-20.0, +10.0]  1.0000  1.0000  0.6250                -  agrees
+onTestPrompt                 generated/tab_b4_heldout.tex   38     4/1   +5.3    [-5.1, +15.9]  0.3750  0.3750  0.2188                -  agrees
+onNoise                      sec/interventions.tex:101      44     3/4   -2.3    [-13.6, +9.1]  1.0000  1.0000  0.7266                -  agrees
+onNoiseServer                sec/interventions.tex:101      45     5/3   +4.4    [-6.7, +17.8]  0.7266  0.7266  0.5078                -  agrees
+cohort_B-A_fs+               sec/interventions.tex:96       19     1/4  -10.5    [-25.0, +0.0]  0.2500  0.3750  0.2188                -  agrees
+cohort_B-A_fs-               sec/interventions.tex:96       20     0/5  -11.2    [-22.5, -2.5]  0.0625  0.0625  0.0312                -  disagrees
+cohort_C-A_fs-               sec/interventions.tex:96       20     1/5   -8.8    [-18.8, +0.0]  0.1562  0.2188  0.1250                -  agrees
+cohort_D-A_fs+               sec/interventions.tex:96       19     7/0  +15.8    [+5.3, +27.6]  0.0156  0.0156  0.0078                -  agrees
+cohort_D-A_fs-               sec/interventions.tex:96       20     1/1   +0.0     [-3.7, +3.7]  1.0000  1.0000  1.0000                -  agrees
+
+-- other paired claims (multiplicity families) --
+claim                        location                      clu     b/w    est     bootstrap CI  p flip  p sign   mid-p         Newcombe  verdict
+guard_v2_rej                 sec/guard.tex:10               40    10/5   +4.3    [-5.0, +15.0]  0.5391  0.3018  0.2101    [-2.4, +11.3]  agrees
+onReserveCua                 sec/interventions.tex:101      45     7/4   +6.6    [-6.7, +22.1]  0.5488  0.5488  0.3877                -  agrees
+onReserveBroad               sec/interventions.tex:101      45     7/6   +2.2   [-13.3, +17.8]  1.0000  1.0000  0.7905                -  agrees
+onTestExpo                   sec/interventions.tex:104     120   11/12   -1.5     [-8.9, +5.7]  0.7217  1.0000  0.8388                -  agrees
+onTestCua                    sec/interventions.tex:103     120   11/10   +0.2     [-6.5, +7.5]  0.8841  1.0000  0.8318                -  agrees
+onAllCua                     sec/interventions.tex:81      165   18/14   +1.9     [-4.3, +8.0]  0.5068  0.5966  0.4869                -  agrees
+onTestNoiseServer            sec/interventions.tex:103     120     9/8   +1.5     [-4.5, +7.6]  0.7185  1.0000  0.8145                -  agrees
+guard_online_fd_orig_modal   sec/guard.tex:12              120    5/19  -11.7    [-19.2, -4.2]  0.0066  0.0066  0.0041    [-19.7, -3.9]  agrees
+guard_online_score_orig_moda sec/guard.tex:12              120    10/7   +1.6     [-4.4, +7.7]  0.6148  0.6291  0.4807                -  agrees
+guard_online_fd_orig_pod     sec/guard.tex:12              120    4/20  -13.3    [-20.8, -5.8]  0.0015  0.0015  0.0009    [-21.2, -5.7]  agrees
+guard_online_score_orig_pod  sec/guard.tex:12              120    10/9   +0.1     [-6.5, +6.6]  0.9755  1.0000  0.8238                -  agrees
+cohort_B-A_selectivity       sec/interventions.tex:96       39       -   +0.7   [-16.1, +16.3]  1.0000     -       -                  -  agrees
+cohort_C-A_fs+               sec/interventions.tex:96       19     1/9  -17.1    [-28.9, -6.6]  0.0137  0.0215  0.0117                -  agrees
+cohort_C-A_selectivity       sec/interventions.tex:96       39       -   -8.4    [-22.6, +5.9]  0.3154     -       -                  -  agrees
+cohort_D-A_selectivity       sec/interventions.tex:96       39       -  +15.8    [+5.3, +27.7]  0.0088     -       -                  -  agrees
+cohort_C-D_fs+               sec/interventions.tex:96       19    0/12  -32.9   [-47.4, -19.7]  0.0005  0.0005  0.0002                -  agrees
+
+== Holm-adjusted p-values (exact sign-flip / permutation p) ==
+-- family A_online_arms (9 tests) --
+  onReserveExpo                    p 1.0000  Holm 1.0000
+  onReserveLmrow                   p 0.6875  Holm 1.0000
+  onReservePrompt                  p 1.0000  Holm 1.0000
+  onReserveCua                     p 0.5488  Holm 1.0000
+  onReserveBroad                   p 1.0000  Holm 1.0000
+  onTestExpo                       p 0.7217  Holm 1.0000
+  onTestPrompt                     p 0.3750  Holm 1.0000
+  onTestCua                        p 0.8841  Holm 1.0000
+  onAllCua                         p 0.5068  Holm 1.0000
+-- family B_cohort_false_completions (4 tests) --
+  cohort_B-A_fs+                   p 0.2500  Holm 0.2500
+  cohort_C-A_fs+                   p 0.0137  Holm 0.0410
+  cohort_D-A_fs+                   p 0.0156  Holm 0.0410
+  cohort_C-D_fs+                   p 0.0005  Holm 0.0020
+-- family C_cohort_selectivity (3 tests) --
+  cohort_B-A_selectivity           p 1.0000  Holm 1.0000
+  cohort_C-A_selectivity           p 0.3154  Holm 0.6308
+  cohort_D-A_selectivity           p 0.0088  Holm 0.0263
+
+Disagreements (bootstrap interval vs exact tests): escalation_prim, escalation_strict, escalation_all, guard_v2_det, cohort_B-A_fs-
+  OK  escalation primary: 5 better, 0 worse, exact p = 0.0625
+  OK  guard v2 detection: 4 against 0 discordant, exact McNemar p = 0.125
+  OK  guard v2 false rejection: 10 against 5 discordant
+  OK  every recomputed point estimate equals the paper's
+EXACT RE-ANALYSIS OK
+```
+
+## `python3 reproduce/fresh_tasks.py`, exit 0
+Added 2026-11-09 with the FRESH-115 registration ([`docs/FRESH_REGISTRATION.md`](../docs/FRESH_REGISTRATION.md)).
+```
+OSWorld test_nogdrive 361 tasks = DIAG 120 + TEST 120 + unsplit 121 (splits regenerated by the frozen rule: identical)
+unsplit tasks named by a project file (pilot runs): 6
+FRESH-115: 115 tasks, sha256 0e76f29147e6c1d45983a8b4d01e728c81047cf3f107a44ab06f18abc35d16a7
+  domains: multi_apps 31, libreoffice_impress 17, libreoffice_calc 16, chrome 15, gimp 7, os 7, libreoffice_writer 6, vs_code 6, thunderbird 5, vlc 5
+  OK  equals docs/FRESH_TASKS.json
+```
+
 ## `python3 reproduce/check_links.py`, exit 0
 ```
-220 relative links checked in 161 documents, 0 broken
+231 relative links checked in 161 documents, 0 broken
 ```
 
 ## `bash reproduce/run_all.sh`, exit 0
+Steps (5) and (6) added 2026-11-09.
 ```
 == (1) OSWorld paired comparisons of the weight edits, recomputed from per-task scores ==
 == PRIMARY VERDICT (rule fixed before reading results): merge vs Modal-served original, Modal vs Modal ==
@@ -163,7 +250,86 @@ Online Feci Guard test, OSWorld test split, paired by task (bootstrap 10,000, se
   criterion 1 (false done down): True   criterion 2 (score gain): False -> NO SCORE GAIN CLAIMED   rule 5 useful: True
 Matches ONLINE_GUARD_RESULT.json exactly.
 
-ALL CHECKS OK: (1)-(4) match the numbers reported in the paper.
+== (5) exact small-sample tests and Holm-adjusted p-values next to the paper's bootstrap intervals ==
+== Exact tests next to the paper's bootstrap intervals (points; p two-sided) ==
+small = fewer than 10 clusters or fewer than 10 discordant units. flip = exact sign-flip randomisation over clusters;
+sign = exact sign test on better/worse units (= exact McNemar when binary); Newcombe = paired score interval (binary only).
+
+-- small-n claims --
+claim                        location                      clu     b/w    est     bootstrap CI  p flip  p sign   mid-p         Newcombe  verdict
+escalation_prim              sec/guard.tex:27                9     5/0  +50.0   [+22.0, +78.0]  0.0625  0.0625  0.0312                -  disagrees
+escalation_strict            sec/guard.tex:27                8     4/0  +50.0   [+13.0, +88.0]  0.1250  0.1250  0.0625                -  disagrees
+escalation_all               sec/guard.tex:27               12     5/1  +33.3    [+4.0, +63.0]  0.0938  0.2188  0.1250                -  disagrees
+repair                       sec/guard.tex:25                9     2/0  +16.7    [+0.0, +44.0]  0.5000  0.5000  0.2500                -  agrees
+repair_all                   sec/guard.tex:25               12     2/0  +12.5    [+0.0, +33.0]  0.5000  0.5000  0.2500                -  agrees
+guard_v2_det                 sec/guard.tex:10               16     4/0  +13.8    [+3.0, +30.0]  0.1250  0.1250  0.0625    [+1.3, +25.6]  disagrees
+onReserveExpo                sec/interventions.tex:101      44     3/4   -2.3    [-13.6, +9.1]  1.0000  1.0000  0.7266                -  agrees
+onReserveLmrow               generated/tab_b4_heldout.tex   14     2/4  -14.3   [-50.0, +21.4]  0.6875  0.6875  0.4531                -  agrees
+onReservePrompt              generated/tab_b4_heldout.tex   20     1/2   -5.0   [-20.0, +10.0]  1.0000  1.0000  0.6250                -  agrees
+onTestPrompt                 generated/tab_b4_heldout.tex   38     4/1   +5.3    [-5.1, +15.9]  0.3750  0.3750  0.2188                -  agrees
+onNoise                      sec/interventions.tex:101      44     3/4   -2.3    [-13.6, +9.1]  1.0000  1.0000  0.7266                -  agrees
+onNoiseServer                sec/interventions.tex:101      45     5/3   +4.4    [-6.7, +17.8]  0.7266  0.7266  0.5078                -  agrees
+cohort_B-A_fs+               sec/interventions.tex:96       19     1/4  -10.5    [-25.0, +0.0]  0.2500  0.3750  0.2188                -  agrees
+cohort_B-A_fs-               sec/interventions.tex:96       20     0/5  -11.2    [-22.5, -2.5]  0.0625  0.0625  0.0312                -  disagrees
+cohort_C-A_fs-               sec/interventions.tex:96       20     1/5   -8.8    [-18.8, +0.0]  0.1562  0.2188  0.1250                -  agrees
+cohort_D-A_fs+               sec/interventions.tex:96       19     7/0  +15.8    [+5.3, +27.6]  0.0156  0.0156  0.0078                -  agrees
+cohort_D-A_fs-               sec/interventions.tex:96       20     1/1   +0.0     [-3.7, +3.7]  1.0000  1.0000  1.0000                -  agrees
+
+-- other paired claims (multiplicity families) --
+claim                        location                      clu     b/w    est     bootstrap CI  p flip  p sign   mid-p         Newcombe  verdict
+guard_v2_rej                 sec/guard.tex:10               40    10/5   +4.3    [-5.0, +15.0]  0.5391  0.3018  0.2101    [-2.4, +11.3]  agrees
+onReserveCua                 sec/interventions.tex:101      45     7/4   +6.6    [-6.7, +22.1]  0.5488  0.5488  0.3877                -  agrees
+onReserveBroad               sec/interventions.tex:101      45     7/6   +2.2   [-13.3, +17.8]  1.0000  1.0000  0.7905                -  agrees
+onTestExpo                   sec/interventions.tex:104     120   11/12   -1.5     [-8.9, +5.7]  0.7217  1.0000  0.8388                -  agrees
+onTestCua                    sec/interventions.tex:103     120   11/10   +0.2     [-6.5, +7.5]  0.8841  1.0000  0.8318                -  agrees
+onAllCua                     sec/interventions.tex:81      165   18/14   +1.9     [-4.3, +8.0]  0.5068  0.5966  0.4869                -  agrees
+onTestNoiseServer            sec/interventions.tex:103     120     9/8   +1.5     [-4.5, +7.6]  0.7185  1.0000  0.8145                -  agrees
+guard_online_fd_orig_modal   sec/guard.tex:12              120    5/19  -11.7    [-19.2, -4.2]  0.0066  0.0066  0.0041    [-19.7, -3.9]  agrees
+guard_online_score_orig_moda sec/guard.tex:12              120    10/7   +1.6     [-4.4, +7.7]  0.6148  0.6291  0.4807                -  agrees
+guard_online_fd_orig_pod     sec/guard.tex:12              120    4/20  -13.3    [-20.8, -5.8]  0.0015  0.0015  0.0009    [-21.2, -5.7]  agrees
+guard_online_score_orig_pod  sec/guard.tex:12              120    10/9   +0.1     [-6.5, +6.6]  0.9755  1.0000  0.8238                -  agrees
+cohort_B-A_selectivity       sec/interventions.tex:96       39       -   +0.7   [-16.1, +16.3]  1.0000     -       -                  -  agrees
+cohort_C-A_fs+               sec/interventions.tex:96       19     1/9  -17.1    [-28.9, -6.6]  0.0137  0.0215  0.0117                -  agrees
+cohort_C-A_selectivity       sec/interventions.tex:96       39       -   -8.4    [-22.6, +5.9]  0.3154     -       -                  -  agrees
+cohort_D-A_selectivity       sec/interventions.tex:96       39       -  +15.8    [+5.3, +27.7]  0.0088     -       -                  -  agrees
+cohort_C-D_fs+               sec/interventions.tex:96       19    0/12  -32.9   [-47.4, -19.7]  0.0005  0.0005  0.0002                -  agrees
+
+== Holm-adjusted p-values (exact sign-flip / permutation p) ==
+-- family A_online_arms (9 tests) --
+  onReserveExpo                    p 1.0000  Holm 1.0000
+  onReserveLmrow                   p 0.6875  Holm 1.0000
+  onReservePrompt                  p 1.0000  Holm 1.0000
+  onReserveCua                     p 0.5488  Holm 1.0000
+  onReserveBroad                   p 1.0000  Holm 1.0000
+  onTestExpo                       p 0.7217  Holm 1.0000
+  onTestPrompt                     p 0.3750  Holm 1.0000
+  onTestCua                        p 0.8841  Holm 1.0000
+  onAllCua                         p 0.5068  Holm 1.0000
+-- family B_cohort_false_completions (4 tests) --
+  cohort_B-A_fs+                   p 0.2500  Holm 0.2500
+  cohort_C-A_fs+                   p 0.0137  Holm 0.0410
+  cohort_D-A_fs+                   p 0.0156  Holm 0.0410
+  cohort_C-D_fs+                   p 0.0005  Holm 0.0020
+-- family C_cohort_selectivity (3 tests) --
+  cohort_B-A_selectivity           p 1.0000  Holm 1.0000
+  cohort_C-A_selectivity           p 0.3154  Holm 0.6308
+  cohort_D-A_selectivity           p 0.0088  Holm 0.0263
+
+Disagreements (bootstrap interval vs exact tests): escalation_prim, escalation_strict, escalation_all, guard_v2_det, cohort_B-A_fs-
+  OK  escalation primary: 5 better, 0 worse, exact p = 0.0625
+  OK  guard v2 detection: 4 against 0 discordant, exact McNemar p = 0.125
+  OK  guard v2 false rejection: 10 against 5 discordant
+  OK  every recomputed point estimate equals the paper's
+EXACT RE-ANALYSIS OK
+
+== (6) FRESH-115: the never-read OSWorld tasks kept for one confirmatory run ==
+OSWorld test_nogdrive 361 tasks = DIAG 120 + TEST 120 + unsplit 121 (splits regenerated by the frozen rule: identical)
+unsplit tasks named by a project file (pilot runs): 6
+FRESH-115: 115 tasks, sha256 0e76f29147e6c1d45983a8b4d01e728c81047cf3f107a44ab06f18abc35d16a7
+  domains: multi_apps 31, libreoffice_impress 17, libreoffice_calc 16, chrome 15, gimp 7, os 7, libreoffice_writer 6, vs_code 6, thunderbird 5, vlc 5
+  OK  equals docs/FRESH_TASKS.json
+
+ALL CHECKS OK: (1)-(6) match the numbers reported in the paper.
 ```
 
 ## `python3 reproduce/check_paths.py`, exit 0

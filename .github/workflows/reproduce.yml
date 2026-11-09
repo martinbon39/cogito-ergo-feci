@@ -10,6 +10,11 @@ on:
       - "experiments/verif_study/manifest.json"
       - "experiments/verif_study/images/**"
       - "experiments/judge_bench/*.jsonl"
+      - "paper/data/**"
+      - "paper/generated/**"
+      - "docs/FRESH_TASKS.json"
+      - "src/osworld/*.json"
+      - "src/osworld/make_split.py"
       - ".github/workflows/reproduce.yml"
   pull_request:
   workflow_dispatch:

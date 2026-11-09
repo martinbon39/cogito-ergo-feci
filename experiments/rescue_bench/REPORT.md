@@ -85,3 +85,10 @@ Pixel replay validity does not guarantee evaluator-state identity. Zero-action p
 Required-output retrieval failed for d682 control K1 (rearranged.png missing, boundary-invalid) and all four aa4 VLC branches (MP4 missing, replay-invalid). These official zeros are retained and qualified in the raw evidence review; successful branch execution does not imply that every evaluator getter succeeded. The f5 control K1 success is a real correction on a strict-valid branch, although its episode is excluded from the primary because other repetitions have invalid replays.
 
 RESULT.json contains per-episode scores, exclusions and source hashes. The data/ archive allows numerical reproduction with analyze.py --root experiments/rescue_bench/data. Raw calls, screenshots, boundary contexts, Guard journals and official evaluator outcomes are under /home/orbit/osw/rescue_bench/. FROZEN.json checks unchanged Guard and harness sources; compatibility.json records the one-step schema check. Runner and scheduling reviews: VERIFY_RUNNER.md and SCHEDULING_REVIEW.md. Raw evaluator audit: MEASURED_REPAIRS_REVIEW.md. The independent completed-cohort numerical verdict and reviewed hashes are recorded separately in FINAL_REVIEW.md.
+
+## Exact test appended 2026-11-09 (the text above is kept as written)
+The primary paired difference (+50 points, episode-cluster bootstrap [+22, +78]) rests on 9 episodes, 5 better with
+the guard and 0 worse. An exact sign-flip test over episodes (and the exact sign test) gives p = 0.0625 two-sided, so
+the difference is not significant at the 5 % level by an exact test; the strict set (8 episodes) gives p = 0.125 and
+all 12 episodes p = 0.094 (sign test 5 against 1: p = 0.22). Source: `python3 reproduce/exact_reanalysis.py` (rows
+escalation_prim, escalation_strict, escalation_all).

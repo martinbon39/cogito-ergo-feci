@@ -5,7 +5,7 @@ and 3 need downloads and, for level 3, a GPU.
 
 ## Level 1: recompute the headline numbers (CPU, Python ≥ 3.9 standard library, about a minute)
 ```bash
-bash reproduce/run_all.sh     # runs the four scripts below; exit 0 = every number equals the paper's
+bash reproduce/run_all.sh     # runs the six scripts below; exit 0 = every number equals the paper's
 ```
 | Script | What it recomputes | Input |
 |---|---|---|
@@ -13,6 +13,8 @@ bash reproduce/run_all.sh     # runs the four scripts below; exit 0 = every numb
 | [`replay_guard.py`](replay_guard.py) | The frozen guard decision (`src/feci_guard/feci_guard.py::check`) on the 268 recorded final screenshots (sha256-checked); only the network call is replaced by the verdict recorded on 2026-11-08. Must print 45/66 and 21/202 | `experiments/verif_study/`, `experiments/judge_bench/claude_responses.jsonl` |
 | [`recount_judges.py`](recount_judges.py) | The three judges (Holo-3.1-4B, Holo4-27B, Claude) recounted from their raw responses: 35/66, 31/66, 45/66 | `experiments/verif_study/`, `experiments/judge_bench/` |
 | [`verify_online_guard.py`](verify_online_guard.py) | The online guard test (120 tasks), with the analysis function committed before the results were read, checked against the published JSON | [`results/online_guard_tasks.csv`](results/online_guard_tasks.csv), `experiments/online_guard/` |
+| [`exact_reanalysis.py`](exact_reanalysis.py) | Exact sign-flip and sign (McNemar) tests, mid-p and Newcombe intervals next to the paper's bootstrap intervals, for every paired claim with fewer than 10 clusters or discordant units, and Holm-adjusted p-values over the online arms and the feasible cohort. Must print exact p = 0.0625 for the escalation replay and 0.125 for the guard v2 detection gain | per-unit data in `paper/data/` and `results/`, bootstrap intervals from `paper/generated/` |
+| [`fresh_tasks.py`](fresh_tasks.py) | FRESH-115: regenerates DIAG and TEST by the frozen rule, takes the 121 tasks in neither, removes the 6 named by a project file, checks the list and sha256 against [`docs/FRESH_TASKS.json`](../docs/FRESH_TASKS.json) | `src/osworld/{test_nogdrive,split_diag,split_test}.json`, [`results/unsplit_task_reads.json`](results/unsplit_task_reads.json) (server scan by `tools/scan_task_reads.py`) |
 | [`check_links.py`](check_links.py) | Every relative link and anchor of the repository's Markdown files | |
 
 Expected output: [`EXPECTED_OUTPUT.md`](EXPECTED_OUTPUT.md). The paper itself is rebuilt from its data with

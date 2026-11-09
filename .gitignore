@@ -4,3 +4,6 @@ __pycache__/
 # caches of src/holo/settings.py
 .hf/
 .pw-browsers/
+/arxiv-submission.tar.gz
+/arxiv-submission.test.log
+/arxiv-submission.test.pdf
